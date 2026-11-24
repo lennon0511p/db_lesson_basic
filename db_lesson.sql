@@ -54,8 +54,7 @@ WHERE (age BETWEEN 20 AND 29 AND gender = 2)
 
 SELECT * FROM people WHERE department_id = 1 ORDER BY age ASC;
 
-SELECT AVG(p.age) AS average_age FROM people p INNER JOIN departments d USING (department_id)
-WHERE d.name = '開発' AND p.gender = 2;
+SELECT AVG(age) AS average_age FROM people WHERE department_id = 2 AND gender = 2;
 
 SELECT p.name, d.name, r.content
 FROM people p
